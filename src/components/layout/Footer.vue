@@ -2,11 +2,9 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="content has-text-centered">
-				<small class="copyright">© Roberto Hernandez</small>
-				
+				<small class="copyright">© Roberto Hernandez</small>	
 			</div>
 		</div>
-		
 	</footer>
 </template>
 
