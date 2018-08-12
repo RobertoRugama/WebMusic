@@ -1,5 +1,5 @@
 <template>
-	<div class="card">
+	<div class="card" v-if="track && track.album">
 		<div class="card-image">
 			<figure class="image is-1by1">
 				<img :src="track.album.images[0].url">	
@@ -28,7 +28,10 @@
 				<nav class="level">
 					<div class="level-left">
 						<a class="level-item">
-							<span class="icon is-small" v-on:click="selectTrack">►</span>
+							<span v-on:click="selectTrack"> Reproducir</span>
+						</a>
+						<a class="level-item">
+							<span v-on:click="goToTrack(track.id)"> Detalle </span>
 						</a>
 					</div>		
 				</nav>
@@ -46,11 +49,15 @@
 		methods: {
 			selectTrack(){
 				this.$emit('select', this.track.id )
+				this.$bus.$emit('set-track', this.track)
+			},
+			goToTrack (id) {
+				this.$router.push({ name: 'track', params: { id } })
 			}
 		}
 	}
 </script>
 
-<style lang="css">
+<style lang="scss">
 	
 </style>

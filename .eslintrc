@@ -1,7 +1,7 @@
 {
-    "extends": "eslint:recommended",
+    "extends": "standard",
     "rules": {
         "no-new": 0
     },
-    "plugins": ['html']
+    "plugins": ["html"]
 }

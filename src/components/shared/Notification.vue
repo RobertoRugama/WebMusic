@@ -8,7 +8,7 @@
 	  			</slot>
 	  		</div>
 	  	</div>
-	  	
+
 	  </div>
 	</div>
 </template>
